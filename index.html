@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="controls">
+    <label>
+      <input type="checkbox" id="themeToggle" />
+      Dark Mode
+    </label>
+    <label>
+      <input type="checkbox" id="angleToggle" />
+      Radians
+    </label>
+    <label>
+      <input type="checkbox" id="sciToggle" />
+      Sci Notation
+    </label>
+  </div>
+
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="result" placeholder="0" disabled />
+    </div>
+    <div class="buttons">
+      <button onclick="appendFunction('sin(')">sin</button>
+      <button onclick="appendFunction('cos(')">cos</button>
+      <button onclick="appendFunction('tan(')">tan</button>
+      <button onclick="appendFunction('^')">^</button>
+
+      <button onclick="appendFunction('(')">(</button>
+      <button onclick="appendFunction(')')">)</button>
+      <button onclick="appendFunction('%')">%</button>
+      <button onclick="appendFunction('/')">÷</button>
+
+      <button onclick="appendFunction('7')">7</button>
+      <button onclick="appendFunction('8')">8</button>
+      <button onclick="appendFunction('9')">9</button>
+      <button onclick="appendFunction('*')">×</button>
+
+      <button onclick="appendFunction('4')">4</button>
+      <button onclick="appendFunction('5')">5</button>
+      <button onclick="appendFunction('6')">6</button>
+      <button onclick="appendFunction('-')">-</button>
+
+      <button onclick="appendFunction('1')">1</button>
+      <button onclick="appendFunction('2')">2</button>
+      <button onclick="appendFunction('3')">3</button>
+      <button onclick="appendFunction('+')">+</button>
+
+      <button onclick="appendFunction('0')">0</button>
+      <button onclick="appendFunction('.')">.</button>
+      <button onclick="clearDisplay()" id="clear">C</button>
+      <button onclick="deleteLast()" id="delete">⌫</button>
+
+      <button onclick="calculate()" id="equals" class="equal-btn">=</button>
+    </div>
+  </div>
+
+  <div class="history">
+    <h2>History</h2>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
